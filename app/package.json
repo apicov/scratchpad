@@ -1,0 +1,16 @@
+{
+  "name": "pico-scratchpad",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "sync": "cap sync android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.4.5",
+    "@capacitor/core": "^7.4.4",
+    "@capacitor/filesystem": "^7.1.9"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.4.4"
+  }
+}

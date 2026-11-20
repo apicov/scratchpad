@@ -1,0 +1,7 @@
+{
+  "appId": "com.example.scratchpad",
+  "appName": "Scratchpad",
+  "webDir": "www",
+  "server": { "androidScheme": "http", "cleartext": true },
+  "android": { "adjustMarginsForEdgeToEdge": "auto" }
+}

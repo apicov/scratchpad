@@ -1,0 +1,16 @@
+# dependencies / data
+node_modules/
+server/data/
+# build output and signing
+*.apk
+*.aab
+*.keystore
+*.jks
+# never commit credentials
+.env
+.env.*
+# editors / OS
+.vscode/
+.idea/
+.DS_Store
+*.swp

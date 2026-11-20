@@ -1,0 +1,24 @@
+:root { --bg: #fafafa; --fg: #1d1d1f; --bar: #ececec; --line: #ccc; --ok: #2e9d4f; --off: #c94a3a; color-scheme: light; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #16171a; --fg: #e4e4e6; --bar: #222327; --line: #3a3b40; color-scheme: dark; }
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body { display: flex; flex-direction: column; background: var(--bg); color: var(--fg);
+  font: 16px system-ui, sans-serif; padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom); }
+header { display: flex; gap: 6px; align-items: center; padding: 6px 8px; background: var(--bar); border-bottom: 1px solid var(--line); }
+#status { width: 10px; height: 10px; border-radius: 50%; background: var(--off); flex: none; }
+#status.ok { background: var(--ok); }
+button { font: inherit; color: inherit; background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 6px 10px; flex: none; }
+#tabs { flex: 1; min-width: 0; display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
+#tabs::-webkit-scrollbar { display: none; }
+.tab { background: transparent; border-color: transparent; white-space: nowrap; opacity: .7; }
+.tab.active { background: var(--bg); border-color: var(--line); opacity: 1; font-weight: 600; }
+textarea { flex: 1; width: 100%; border: 0; outline: 0; resize: none; padding: 12px;
+  background: var(--bg); color: var(--fg); font: 15px/1.45 ui-monospace, "JetBrains Mono", monospace; }
+/* Phones: buttons on top, tabs get a full-width row below */
+@media (max-width: 600px) {
+  header { flex-wrap: wrap; }
+  #new { margin-left: auto; }
+  #tabs { order: 1; flex-basis: 100%; }
+}
